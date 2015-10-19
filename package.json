@@ -1,0 +1,21 @@
+{
+  "name": "react-app",
+  "main": "lib/app/server/application.js",
+  "browser": "lib/app/client/application.js",
+  "dependencies": {
+    "no-frills-router": "0.0.1",
+    "react": "^0.13.3",
+    "service-oracle": "^1.0.0"
+  },
+  "devDependencies": {
+    "babel": "^5.8.23",
+    "babelify": "^6.3.0",
+    "express": "^4.13.3",
+    "nodemon": "^1.7.0"
+  },
+  "scripts": {
+    "example.build": "browserify -t babelify example/client.js -o example/client.build.js",
+    "example.watch": "watchify -t babelify example/client.js -o example/client.build.js",
+    "example.start": "nodemon example/server.js"
+  }
+}
